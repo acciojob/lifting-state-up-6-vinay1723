@@ -6,8 +6,8 @@ export default function TodoList({ todos, handleComplete }) {
       <h2>Child Component</h2>
       <ul>
         {todos.map((task) => (
-          <li key={task.id} style={{ display: "flex", gap: "10px" }}>
-            <p>{task.description}</p>
+          <li key={task.id} style={{ display: "flex" }}>
+            <p style={{ margin: "5px 10px" }}>{task.description}</p>
             {!task.complete && (
               <button onClick={(e) => handleComplete(task.id)}>Complete</button>
             )}

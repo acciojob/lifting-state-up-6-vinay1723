@@ -9,7 +9,7 @@ export default function TodoList({ todos, handleComplete }) {
           <li key={task.id} style={{ display: "flex" }}>
             <p style={{ margin: "5px 10px" }}>{task.description}</p>
             {!task.complete && (
-              <button onClick={(e) => handleComplete(task.id)}>Complete</button>
+              <button onClick={(e) => handleComplete(task.id)}>complete</button>
             )}
           </li>
         ))}

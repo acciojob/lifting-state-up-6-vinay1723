@@ -9,10 +9,14 @@ export default function TodoList(props) {
         {props.todos.map((task) => (
           <li key={task.id} style={{ display: "flex" }}>
             <p style={{ margin: "5px 10px" }}>{task.description}</p>
-            {!task.completed && (
-              <button onClick={(e) => props.handleComplete(task.id)}>
-                Complete
-              </button>
+            {!task.complete && (
+              <button
+  data-testid={`complete-btn-${task.id}`}
+  onClick={() => props.handleComplete(task.id)}
+>
+  Complete
+</button>
+
             )}
           </li>
         ))}

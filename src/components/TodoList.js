@@ -11,7 +11,7 @@ export default function TodoList(props) {
             <p style={{ margin: "5px 10px" }}>{task.description}</p>
             {!task.complete && (
               <button onClick={(e) => props.handleComplete(task.id)}>
-                complete
+                Complete
               </button>
             )}
           </li>

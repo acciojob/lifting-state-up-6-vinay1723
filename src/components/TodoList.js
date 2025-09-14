@@ -14,11 +14,11 @@ export default function TodoList(props) {
                 textDecoration: task.completed ? "line-through" : "none",
               }}
             >
-              {task.description}
+              {task.text}
             </p>
-            {!task.complete && (
+            {!task.completed && (
               <button onClick={(e) => props.handleComplete(task.id)}>
-                complete
+                Complete
               </button>
             )}
           </li>
